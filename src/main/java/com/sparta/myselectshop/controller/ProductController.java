@@ -29,7 +29,7 @@ public class ProductController {
     }
 
     @PutMapping("/products/{id}")
-    public ProductResponseDto updateProduct(@PathVariable int id, @RequestBody
+    public ProductResponseDto updateProduct(@PathVariable Long id, @RequestBody
     ProductMypriceRequestDto requestDto) {
         return productService.updateProduct(id, requestDto);
     }
