@@ -1,5 +1,6 @@
 package com.sparta.myselectshop.entity;
 
+import com.sparta.myselectshop.dto.ProductMypriceRequestDto;
 import jakarta.persistence.*;
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
