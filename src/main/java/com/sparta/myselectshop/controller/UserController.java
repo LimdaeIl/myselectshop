@@ -85,7 +85,8 @@ public class UserController {
     public String kakaoLogin(@RequestParam String code, HttpServletResponse response)
             throws JsonProcessingException {
         String token = kakaoService.kakaoLogin(code); // JWT 토큰 반환
-        Cookie cookie = new Cookie(JwtUtil.AUTHORIZATION_HEADER, token);
+
+        Cookie cookie = new Cookie(JwtUtil.AUTHORIZATION_HEADER, token.substring(7));
         cookie.setPath("/"); // 메인 페이지("/")
         response.addCookie(cookie);
 
